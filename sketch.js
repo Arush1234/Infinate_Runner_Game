@@ -14,8 +14,6 @@ function preload() {
 function setup() {
   createCanvas(400, 600);
   frameRate(40);
-  bird = new Bird(width/3, height / 3);
-  bird.flap();
   angleMode(DEGREES);
   textAlign(CENTER, CENTER);
   textStyle(BOLD);
