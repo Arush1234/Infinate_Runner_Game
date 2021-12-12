@@ -13,10 +13,11 @@ class Pipe {
     fill(255, 0, 0);
     image(pipeRevImg, this.x, 0, this.w, this.top);
     fill(0, 255, 0);
-    let heights = height - this.gap - this.top;
-    let y = height - heights;
-    image(pipeImg, this.x,y, this.w, heights);
+    let height_b = height - this.gap - this.top;
+    let y_b = height - height_b;
+    image(pipeImg, this.x, y_b, this.w, height_b);
   }
+
   offScreen() {
     if (this.x + this.w + this.speed < 0) {
       return true;
@@ -39,7 +40,9 @@ class Pipe {
       return true;
     }
     return false;
-      update() {
+  }
+
+  update() {
     this.x -= this.speed;
   }
 }
