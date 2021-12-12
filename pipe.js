@@ -40,5 +40,7 @@ class Pipe {
       return true;
     }
     return false;
+      update() {
+    this.x -= this.speed;
   }
 }
