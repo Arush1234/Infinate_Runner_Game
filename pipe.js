@@ -1,7 +1,7 @@
 class Pipe {
   constructor() {
     this.x = width;
-    this.w = 290;
+    this.w = 90;
     this.gap = 120;
     this.min_height = 100;
     this.max_height = height - this.min_height - this.gap;
