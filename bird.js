@@ -21,7 +21,6 @@ class Bird {
     } else {
       rotate(35);
     }
-    // ellipse(this.x, this.y, this.r);
     image(birdImg, 0, 0, this.r, this.r);
     pop();
   }
