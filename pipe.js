@@ -17,6 +17,12 @@ class Pipe {
     let y = height - heights;
     image(pipeImg, this.x,y, this.w, heights);
   }
+  offScreen() {
+    if (this.x + this.w + this.speed < 0) {
+      return true;
+    }
+    return false;
+  }
 
   hit(bird) {
     if (bird.x > this.x && bird.x < this.x + this.w) {
