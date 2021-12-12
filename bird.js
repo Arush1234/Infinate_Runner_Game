@@ -41,7 +41,6 @@ class Bird {
 
   flap() {
     this.velocity += this.lift;
-    this.velocity *= (1 - this.friction);
     this.up = true;
   }
 }
