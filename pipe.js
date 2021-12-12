@@ -14,8 +14,7 @@ class Pipe {
     image(pipeRevImg, this.x, 0, this.w, this.top);
     fill(0, 255, 0);
     let heights = height - this.gap - this.top;
-    let y = height - heights;
-    image(pipeImg, this.x, y, this.w, heights);
+    image(pipeImg, this.x, this.w, heights);
   }
 
   offScreen() {
