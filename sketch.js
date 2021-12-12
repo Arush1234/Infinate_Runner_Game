@@ -22,8 +22,6 @@ function setup() {
 
 function draw() {
   background(backgroundImg);
-  // drawLine()
-  // console.log('Frame rate: ' + frameRate());
   if (frameCount % 50 == 0) {
     pipes.push(new Pipe());
     playing = true;
@@ -47,18 +45,12 @@ function draw() {
       text("Score: " +
         bird.score, width / 2, height / 2);
       playing = false;
-      noLoop();
     }
   }
-  // draw bird
   bird.show();
   bird.update();
-  // show the current score
   if (playing) {
     text(bird.score, width / 2, height / 5);
-  }
-  if (pipes.length - 1 < 0) {
-    text("Let's go", width / 2, height / 3);
   }
 }
 
@@ -67,15 +59,6 @@ function keyPressed() {
     bird.flap();
   }
 }
-
-function mousePressed(){
-  // click inside the canvas
-  if(mouseX > 0 && mouseX < width &&
-     mouseY > 0 && mouseY < height) {
-    bird.flap();
-  }
-}
-
 
 function drawLine() {
   let step = 100;
